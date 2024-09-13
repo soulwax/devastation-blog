@@ -1,11 +1,12 @@
+<!-- File: src/routes/sverdle/+page.svelte -->
 <script lang="ts">
-	import { confetti } from '@neoconfetti/svelte';
-	import { enhance } from '$app/forms';
-	import type { PageData, ActionData } from './$types';
+	// Error: parsing /home/soulwax/workspace/web/deva-blog/tsconfig.node.json failed: Error: ENOENT: no such file or directory, open '/home/soulwax/workspace/web/deva-blog/tsconfig.node.json'svelte(script)
+	import { enhance } from '$app/forms'; // Error: Cannot find module '$app/forms' or its corresponding type declarations.ts(2307)
+	import { confetti } from '@neoconfetti/svelte'; // Error: File '/home/soulwax/workspace/web/deva-blog/node_modules/@neoconfetti/svelte/dist/index.d.ts' is not a module.ts(2306)
+	import type { ActionData, PageData } from './$types';
 	import { reduced_motion } from './reduced-motion';
 
 	export let data: PageData;
-
 	export let form: ActionData;
 
 	/** Whether or not the user has won */
@@ -58,9 +59,7 @@
 	 * if client-side JavaScript is enabled
 	 */
 	function update(event: MouseEvent) {
-		const key = (event.target as HTMLButtonElement).getAttribute(
-			'data-key'
-		);
+		const key = (event.target as HTMLButtonElement).getAttribute('data-key');
 
 		if (key === 'backspace') {
 			currentGuess = currentGuess.slice(0, -1);

@@ -1,3 +1,6 @@
+<!-- File: src/routes/about/+page.svelte -->
+<!-- Error [ERR_MODULE_NOT_FOUND]: Cannot find package '@sveltejs/adapter-node' imported from /home/soulwax/workspace/web/deva-blog/svelte.config.jssvelte
+head> -->
 <svelte:head>
 	<title>About</title>
 	<meta name="description" content="About this app" />
